@@ -39,8 +39,8 @@ namespace TestBusApp
             this.InitializeComponent();
 
 
-            //var connectionString = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
-            //amqpConnection = new Amqp.Connection(connectionString);
+            //amqpconnectionString = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
+            //amqpConnection = new Amqp.Connection(amqpconnectionString);
         }
 
         private async void OnSendClick(object sender, RoutedEventArgs e)
