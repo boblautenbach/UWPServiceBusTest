@@ -38,9 +38,6 @@ namespace TestBusApp
         {
             this.InitializeComponent();
 
-
-            ampsAddress = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
-            amqpConnection = new Amqp.Connection(ampsAddress);
         }
 
         private async void OnSendClick(object sender, RoutedEventArgs e)
@@ -101,7 +98,10 @@ namespace TestBusApp
         {
             try
             {
-                ////Amqp Code
+
+                //ampsAddress = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
+                //amqpConnection = new Amqp.Connection(ampsAddress);
+                //////Amqp Code
                 //var receiverSubscriptionId = "me.amqp.recieiver";
 
                 //// Name of the topic you will be sending messages
@@ -130,6 +130,7 @@ namespace TestBusApp
                         SendToView("Error in OnMessage Call " + r.Message);
                     }
                 });
+
             }
             catch (Exception ex)
             {
