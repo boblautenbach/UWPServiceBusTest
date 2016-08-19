@@ -31,7 +31,7 @@ namespace TestBusApp
         Subscription sub = null;
 
         string amqpEventhubHostFormat = "amqps://{0}:{1}@{2}.servicebus.windows.net";
-        string amqpconnectionString = string.Empty;
+        Address ampsAddress;
         Amqp.Connection amqpConnection = null;
 
         public MainPage()
@@ -39,8 +39,8 @@ namespace TestBusApp
             this.InitializeComponent();
 
 
-            //amqpconnectionString = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
-            //amqpConnection = new Amqp.Connection(amqpconnectionString);
+            //ampsAddress = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
+            //amqpConnection = new Amqp.Connection(ampsAddress);
         }
 
         private async void OnSendClick(object sender, RoutedEventArgs e)
