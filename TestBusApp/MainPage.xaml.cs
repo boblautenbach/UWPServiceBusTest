@@ -39,8 +39,8 @@ namespace TestBusApp
             this.InitializeComponent();
 
 
-            //ampsAddress = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
-            //amqpConnection = new Amqp.Connection(ampsAddress);
+            ampsAddress = new Address(string.Format(amqpEventhubHostFormat, "RootManageSharedAccessKey", Uri.EscapeDataString("YYj8bgHbV17s0qYfRX/3iDjWo1B3x2jkip0Req/omWw="), "pitalk"));
+            amqpConnection = new Amqp.Connection(ampsAddress);
         }
 
         private async void OnSendClick(object sender, RoutedEventArgs e)
@@ -52,19 +52,19 @@ namespace TestBusApp
                 //var amqpSession = new Session(amqpConnection);
                 //var senderSubscriptionId = "me.amqp.sender";
                 //var topic = "messages";
-                //var sender = new SenderLink(amqpSession, senderSubscriptionId, topic);
+                //var senderObj = new SenderLink(amqpSession, senderSubscriptionId, topic);
                 //var message = new Amqp.Message();
                 //message.Properties = new Properties();
                 //message.Properties.Subject = "mymessagetype";
                 //message.ApplicationProperties = new ApplicationProperties();
                 //message.ApplicationProperties["MyProperty"] = "Hello World!";
-                //sender.Send(message);
+                //senderObj.Send(message);
 
 
 
                 //Azure.Messaging.Managed
-                var topic = new Topic("messages", connectionString);
-                await topic.SendAsync(new Microsoft.WindowsAzure.Messaging.Message("Hello World"));
+                var top = new Topic("messages", connectionString);
+                await top.SendAsync(new Microsoft.WindowsAzure.Messaging.Message("Hello World"));
             }
             catch (Exception ex)
             {
