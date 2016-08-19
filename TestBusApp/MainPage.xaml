@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="TestBusApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestBusApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <Button Margin="6" Name="btnConnect" HorizontalAlignment="Stretch" Content="Wire Up Receive OnMessage" Click="OnConnect" ></Button>
+            <Button Margin="6" Name="btnSendMessage" HorizontalAlignment="Stretch" Content="Send Message" Click="OnSendClick" ></Button>
+            <TextBlock Margin="6" HorizontalAlignment="Stretch" Text="Log Text Here..." Name="txtLog"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
